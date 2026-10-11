@@ -6,7 +6,7 @@
   <title>(jeff)shrager.org</title>
   <style>
     body {
-      max-width: 40em;
+      max-width: 64em;
       margin: 2em auto;
       padding: 0 1em;
       font-family: Georgia, "Times New Roman", serif;
@@ -19,11 +19,24 @@
     figure { margin: 2em 0; text-align: center; }
     img { max-width: 100%; height: auto; }
     figcaption { font-style: italic; color: #555; }
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3em;
+    }
+    .columns h2 { margin-top: 0; }
+    .projects li { margin-bottom: 0.6em; }
+    .columns section { min-width: 0; overflow-wrap: anywhere; }
+    @media (max-width: 700px) {
+      .columns { grid-template-columns: 1fr; gap: 1em; }
+    }
   </style>
 </head>
 <body>
   <h1>(jeff)shrager.org</h1>
 
+  <div class="columns">
+  <section>
   <p>
     <a href="https://docs.google.com/document/d/15yWpwirBJobt7fMcXmLFmQpDTIsre_o_Vf9YmsaOA3k/edit?usp=sharing">Jeff Shrager, PhD</a>.
     Chief Scientist, <a href="https://www.bennuclimate.com/technology">Bennu Climate, Inc</a>,
@@ -33,8 +46,11 @@
   <p>
     My personal email is <a href="mailto:jshrager@gmail.com">jshrager@gmail.com</a>,
     and here's my <a href="https://www.linkedin.com/in/jeff-shrager-7095a4110/">linkedin account</a>.
-    See my <a href="https://docs.google.com/document/d/15yWpwirBJobt7fMcXmLFmQpDTIsre_o_Vf9YmsaOA3k">vita</a>
-    for more details regarding my research.
+  </p>
+
+  <p>
+    <strong>See my <a href="https://docs.google.com/document/d/15yWpwirBJobt7fMcXmLFmQpDTIsre_o_Vf9YmsaOA3k">vita</a>
+    for more details regarding my research.</strong>
   </p>
 
   <p>
@@ -52,10 +68,34 @@
     <img src="wisp-lizard-napping.jpg" alt="Wisp Lizard Napping" width="568" height="319">
     <figcaption>Wisp Lizard Napping (by R.A.)</figcaption>
   </figure>
+  </section>
 
-  <h2>My Favorite Projects</h2>
-  <ul>
-    <li><a href="diary/diary.html">Diary of an Insane Cell Mechanic</a>: a psychologist's descent into molecular biology</li>
+  <section>
+  <h2>Significant and Recent Projects</h2>
+  <ul class="projects">
+    <li><a href="https://github.com/jeffshrager/ExecutableArchaeology" target="_blank" rel="noopener">Executable Archaeology</a>: Studying historical computational systems by reconstructing and running their original programs: the Logic Theorist (the first AI), the Simon&ndash;Yngve sentence generator, and the Heuristic Coder, all from their original IPL-V code, via a new Lisp IPL-V interpreter and an IBM 1620 emulator. [<a href="https://arxiv.org/abs/2603.13514" target="_blank" rel="noopener">Logic Theorist paper</a>]</li>
+    <li><a href="https://arxiv.org/abs/2509.24068" target="_blank" rel="noopener">A Small Math Model</a>: Recasting Siegler &amp; Shrager's strategy-choice model of arithmetic learning in an LLM-inspired architecture (NeurIPS MATH-AI 2025).</li>
+    <li><a href="https://www.bennuclimate.com/" target="_blank" rel="noopener">Bennu Climate</a>: Chief scientist at a methane-removal startup; built and run an atmospheric photocatalysis lab. [<a href="https://docs.google.com/presentation/d/1j1FET894CotuC-NKDrHDWVugoJpo93WAeCmSNrwNZ4U/edit?usp=sharing" target="_blank" rel="noopener">AGU 2024</a>]</li>
+    <li><a href="https://elizagen.org" target="_blank" rel="noopener">ELIZAGEN</a>: The genealogy of ELIZA. We rediscovered Weizenbaum's original code in 2021 and made it run in 2023; UNESCO later named it one of the most important programs of all time. [<a href="https://ieeexplore.ieee.org/document/11030922" target="_blank" rel="noopener">IEEE Annals</a>] [<a href="https://mitpressbookstore.mit.edu/book/9780262052481" target="_blank" rel="noopener">MIT Press book</a>] [<a href="https://corecursive.com/eliza-with-jeff-shrager/" target="_blank" rel="noopener">podcast</a>]</li>
+    <li><a href="http://arxiv.org/abs/2408.04734" target="_blank" rel="noopener">Cognitive engineering at SLAC</a>: Applying cognitive engineering to instrument operations at LCLS, the world's largest x-ray laser (early 2020s).</li>
+    <li><a href="https://www.medrxiv.org/content/10.1101/2021.06.12.21258409" target="_blank" rel="noopener">Global Cumulative Treatment Analysis</a>: A new way to run clinical trials, proposed ~2013 and validated with virtual trials in 2022. [<a href="https://drive.google.com/file/d/1KX_gPO160zw0YLEbHYqNl-0zOOUNoHTO/view?usp=sharing" target="_blank" rel="noopener">Is Cancer Solvable?</a>]</li>
+    <li><a href="https://drive.google.com/file/d/17gNAeu49qV2EgjDSZJwAexPffD3gMb3_/view?usp=sharing" target="_blank" rel="noopener">CollabRx and xCures</a>: Co-founder and CTO of two AI-based biomedical startups; CollabRx was acquired in 2012.</li>
+    <li><a href="https://drive.google.com/file/d/1HkGd9WkJKifr_UE3tduNtXDXNjcp9Pwa/view?usp=sharing" target="_blank" rel="noopener">Bayesian Community (Xerox PARC)</a>: Distributed collaborative information analysis based on a "Bayes community" model of collaboration (~2010).</li>
+    <li><a href="http://nar.oxfordjournals.org/content/37/suppl_2/W28.full-text-lowres.pdf" target="_blank" rel="noopener">BioBIKE / BioLingua</a>: The first intelligent, through-the-web programmable scientific computing platform (Carnegie Institution, 2000-2008).</li>
+    <li><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC326643/" target="_blank" rel="noopener">Chlamydomonas genomics</a>: The first complete genome build and a microarray for <i>Chlamydomonas reinhardtii</i> (Carnegie Institution).</li>
+    <li><a href="https://drive.google.com/file/d/1gOJKzzNVo4ruwCF-sKefJfxBXxmAUzGy/view?usp=sharing" target="_blank" rel="noopener">Phytoplankton microbiology</a>: Marine and freshwater phytoplankton environmental microbiology (Carnegie Institution).</li>
+    <li><a href="diary/diary.html" target="_blank" rel="noopener">Diary of an Insane Cell Mechanic</a>: A psychologist's descent into molecular biology: a participant-observer diary of becoming a biologist (2000). [<a href="https://drive.google.com/file/d/1-ph6ax-zGxALhAMN9UNV7TdpBi-kbj84/view?usp=sharing" target="_blank" rel="noopener">chapter</a>]</li>
+    <li><a href="https://drive.google.com/file/d/1AlPeTCFmGlCquxZZ3RqxHLONHL-PN3FC/view?usp=sharing" target="_blank" rel="noopener">Afferent Systems</a>: First employee at an AI-based robotic drug-discovery startup, acquired in 2000.</li>
+    <li><a href="https://drive.google.com/file/d/1um44NOkyMWZUsOL57pP0TzXVvSp5FH_S/view" target="_blank" rel="noopener">Waves of cortical growth</a>: A neural-network model of how the brain's computational subsystems become organized, a precursor of later deep networks (CMU, early 1990s).</li>
+    <li><a href="https://drive.google.com/file/d/1XCUJfA_bfAXjHGic7islY9w2FdT0AGFf/view?usp=sharing" target="_blank" rel="noopener">The power law of practice</a>: Experimental and mathematical accounts of the power law of learning and spreading activation (Xerox PARC, late 1980s; <i>Science</i> 1987, 1988).</li>
+    <li><a href="https://drive.google.com/file/d/1PNEXx4uPCtiKsphygbEyzgExXmddmqlE/view?usp=sharing" target="_blank" rel="noopener">Children learning with parents</a>: How children learn to interpret the world while cooking, reading, and visiting a science museum with their parents (Xerox PARC).</li>
+    <li><a href="https://drive.google.com/file/d/1UUavoWgAmXxi64biTvCc03oSZcRWno65/view?usp=sharing" target="_blank" rel="noopener">Instructionless learning</a>: A computational model of exploratory learning based on "view application" (CMU, early 1980s).</li>
+    <li><a href="https://drive.google.com/file/d/1XKcv3d3rtoFfgUJulyoto77DAuYnKv2N/view?usp=sharing" target="_blank" rel="noopener">Strategy choice in arithmetic</a>: With Bob Siegler, a hybrid model of how children learn simple arithmetic and discover new strategies (CMU, 1980s-90s).</li>
+    <li><a href="https://drive.google.com/file/d/1RU-c5ndW3lFiuqjkBKCCvjqVRIHfGr8U/view?usp=sharing" target="_blank" rel="noopener">An expert system that volunteers advice</a>: The first goal-recognizing, mixed-initiative AI help system, a precursor of "wizards" (and Clippy) (Penn, 1982).</li>
+    <li>APL.MS: Built and supported Univac's APL environment (Penn, late 1970s).</li>
+    <li><a href="https://drive.google.com/file/d/1H5WZckx8rV2mg9oveQ7krdhQWLlMAJVT/view?usp=sharing" target="_blank" rel="noopener">ELIZA in BASIC</a>: Written in middle school and published in <i>Creative Computing</i> in 1977; became one of the most widely copied programs of the PC era.</li>
   </ul>
+  </section>
+  </div>
 </body>
 </html>
